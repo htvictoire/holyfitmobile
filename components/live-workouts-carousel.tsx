@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { Play, Pause, RotateCcw, Heart, Zap, Users, MessageCircle, Volume2, VolumeX, Maximize2, X, Target, TrendingUp, Dumbbell, Flame } from "lucide-react"
+import { Play, Pause, RotateCcw, Heart, Users, MessageCircle, Volume2, VolumeX, Maximize2, X, Target, TrendingUp, Dumbbell, Flame } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
