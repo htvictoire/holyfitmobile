@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { X, User, Trophy, BookOpen, Calendar, Settings, Zap, Heart, Share2, Moon, HelpCircle, LogOut } from "lucide-react"
+import { X, User, Trophy, BookOpen, Calendar, Settings, Zap, Heart, Share2, Moon, HelpCircle, LogOut, Medal } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
@@ -11,7 +11,8 @@ import Link from "next/link"
 
 const menuItems = [
   { icon: User, label: "Profile", href: "/profile", badge: null },
-  { icon: Trophy, label: "My Programs & Challenges", href: "/programs", badge: "2 Active" },
+  { icon: Trophy, label: "My Programs", href: "/programs", badge: "2 Active" },
+  { icon: Medal, label: "Challenges", href: "/challenges", badge: "3 Active" },
   { icon: BookOpen, label: "Success Stories", href: "/success-stories", badge: null },
   { icon: Calendar, label: "Schedule", href: "/schedule", badge: "3 Today" },
   { icon: Settings, label: "Settings", href: "/settings", badge: null },
