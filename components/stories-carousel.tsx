@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { Plus } from "lucide-react"
 import { VerificationBadge, VerificationLevel } from "@/components/verification-badge"
+import { StoryViewer } from "@/components/story-viewer"
 
 const stories = [
   {
@@ -56,6 +57,7 @@ const stories = [
 
 export function StoriesCarousel() {
   const [activeStory, setActiveStory] = useState<number | null>(null)
+  const [isStoryViewerOpen, setIsStoryViewerOpen] = useState(false)
 
   return (
     <div className="px-4">
@@ -65,7 +67,12 @@ export function StoriesCarousel() {
           <div
             key={story.id}
             className="flex-shrink-0 flex flex-col items-center space-y-2 cursor-pointer"
-            onClick={() => !story.isAddStory && setActiveStory(story.id)}
+            onClick={() => {
+              if (!story.isAddStory) {
+                setActiveStory(story.id)
+                setIsStoryViewerOpen(true)
+              }
+            }}
           >
             <div className="relative">
               {story.isAddStory ? (
@@ -103,6 +110,14 @@ export function StoriesCarousel() {
           </div>
         ))}
       </div>
+
+      {/* Story Viewer */}
+      <StoryViewer
+        isOpen={isStoryViewerOpen}
+        onClose={() => setIsStoryViewerOpen(false)}
+        initialStoryId={activeStory || 0}
+        stories={stories}
+      />
     </div>
   )
 }
