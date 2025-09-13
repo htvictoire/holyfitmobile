@@ -1,8 +1,9 @@
 "use client"
 
 import { useState } from "react"
-import { ArrowLeft, Play, Pause, Heart, Share2, Bookmark } from "lucide-react"
-import Link from "next/link"
+import { Play, Pause, Heart, Share2, Bookmark } from "lucide-react"
+import { UnifiedHeader } from "@/components/unified-header"
+import { MobileNavigation } from "@/components/mobile-navigation"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 export default function WorkoutPage() {
@@ -36,14 +37,7 @@ export default function WorkoutPage() {
   return (
     <div className="min-h-screen bg-gray-950 text-white">
       <div className="max-w-sm mx-auto bg-gray-950 min-h-screen relative">
-        {/* Header */}
-        <div className="flex items-center justify-between p-4 bg-gray-900/50 backdrop-blur-sm">
-          <Link href="/">
-            <ArrowLeft className="w-6 h-6 text-white" />
-          </Link>
-          <h1 className="font-semibold text-white">Workout</h1>
-          <Share2 className="w-6 h-6 text-white" />
-        </div>
+        <UnifiedHeader />
 
         {/* Video Player Area */}
         <div className="relative bg-gradient-to-br from-orange-500 to-red-600 aspect-video">
@@ -146,6 +140,8 @@ export default function WorkoutPage() {
             ))}
           </div>
         </div>
+
+        <MobileNavigation />
       </div>
     </div>
   )

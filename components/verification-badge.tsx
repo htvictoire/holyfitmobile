@@ -1,7 +1,6 @@
 "use client"
 
-import { Badge } from "@/components/ui/badge"
-import { Verified, ShieldCheck, Star } from "lucide-react"
+import Image from "next/image"
 
 export type VerificationLevel = "coach" | "gym" | "gym-coach" | null
 
@@ -16,45 +15,47 @@ export function VerificationBadge({ level, className = "", size = "sm" }: Verifi
 
   const config = {
     coach: {
-      color: "bg-blue-500",
-      icon: ShieldCheck,
+      src: "/badges/blue-verified.svg",
+      alt: "Verified Coach",
       label: "Verified Coach",
-      description: "Certified fitness professional affiliated with verified gym",
+      description: "Instagram-style verified coach",
     },
     gym: {
-      color: "bg-yellow-500",
-      icon: Star,
-      label: "Verified Gym",
-      description: "Official verified fitness facility",
+      src: "/badges/gold-verified.svg",
+      alt: "Verified Business",
+      label: "Verified Business",
+      description: "Twitter-style gold verified business",
     },
     "gym-coach": {
-      color: "bg-white",
-      icon: Verified,
-      label: "Gym Coach",
-      description: "Coach verified by a verified gym facility",
+      src: "/badges/twitter-verified.svg",
+      alt: "Verified Professional",
+      label: "Verified Professional",
+      description: "Twitter-style verified professional coach",
     },
   }
 
-  const { color, icon: Icon, label } = config[level]
+  const { src, alt, label } = config[level]
 
   const sizeClasses = {
-    sm: "w-4 h-4",
-    md: "w-5 h-5",
-    lg: "w-6 h-6"
+    sm: 16,
+    md: 20,
+    lg: 24
   }
 
-  const iconSizeClasses = {
-    sm: "w-2.5 h-2.5",
-    md: "w-3 h-3",
-    lg: "w-3.5 h-3.5"
-  }
+  const size_px = sizeClasses[size]
 
   return (
     <div
-      className={`${sizeClasses[size]} ${color} rounded-full flex items-center justify-center ${className}`}
+      className={`inline-flex items-center justify-center ${className}`}
       title={label}
     >
-      <Icon className={`${iconSizeClasses[size]} ${level === "gym-coach" ? "text-gray-800" : "text-white"}`} />
+      <Image
+        src={src}
+        alt={alt}
+        width={size_px}
+        height={size_px}
+        className="drop-shadow-sm"
+      />
     </div>
   )
 }

@@ -2,7 +2,8 @@
 
 import { useState } from "react"
 import { Calendar, Clock, MapPin, User, Plus } from "lucide-react"
-import { HeaderMenu } from "@/components/header-menu"
+import { UnifiedHeader } from "@/components/unified-header"
+import { MobileNavigation } from "@/components/mobile-navigation"
 import { StatusBar } from "@/components/status-bar"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -61,7 +62,7 @@ export default function SchedulePage() {
     <div className="min-h-screen bg-gray-950 text-white">
       <div className="max-w-sm mx-auto bg-gray-950 min-h-screen relative">
         <StatusBar />
-        <HeaderMenu title="Schedule" />
+        <UnifiedHeader />
 
         <div className="px-4 pt-4 pb-24 space-y-6">
           {/* Quick Date Selector */}
@@ -175,6 +176,8 @@ export default function SchedulePage() {
             </div>
           )}
         </div>
+
+        <MobileNavigation />
       </div>
     </div>
   )

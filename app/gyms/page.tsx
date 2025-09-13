@@ -2,7 +2,8 @@
 
 import { useState } from "react"
 import { Search, Filter, MapPin, Clock, Star, Users } from "lucide-react"
-import { HeaderMenu } from "@/components/header-menu"
+import { UnifiedHeader } from "@/components/unified-header"
+import { MobileNavigation } from "@/components/mobile-navigation"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -85,7 +86,7 @@ export default function GymsPage() {
   return (
     <div className="min-h-screen bg-gray-950 text-white">
       <div className="max-w-sm mx-auto bg-gray-950 min-h-screen relative">
-        <HeaderMenu title="Find Gyms" />
+        <UnifiedHeader />
 
         {/* Search and Filters */}
         <div className="px-4 py-4">
@@ -208,6 +209,8 @@ export default function GymsPage() {
             </Card>
           ))}
         </div>
+
+        <MobileNavigation />
       </div>
     </div>
   )

@@ -2,7 +2,8 @@
 
 import { useState } from "react"
 import { Search, Filter, MapPin } from "lucide-react"
-import { HeaderMenu } from "@/components/header-menu"
+import { UnifiedHeader } from "@/components/unified-header"
+import { MobileNavigation } from "@/components/mobile-navigation"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -88,7 +89,7 @@ export default function CoachesPage() {
   return (
     <div className="min-h-screen bg-gray-950 text-white">
       <div className="max-w-sm mx-auto bg-gray-950 min-h-screen relative">
-        <HeaderMenu title="Find Coaches" />
+        <UnifiedHeader />
 
         {/* Search and Filters */}
         <div className="px-4 py-4">
@@ -143,6 +144,8 @@ export default function CoachesPage() {
             </div>
           )}
         </div>
+
+        <MobileNavigation />
       </div>
     </div>
   )
