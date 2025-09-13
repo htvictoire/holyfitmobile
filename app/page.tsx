@@ -4,7 +4,7 @@ import { useState, useEffect } from "react"
 import { MobileNavigation } from "@/components/mobile-navigation"
 import { StatusBar } from "@/components/status-bar"
 import { UnifiedHeader } from "@/components/unified-header"
-import { LiveWorkoutCard } from "@/components/live-workout-card"
+import { LiveWorkoutsCarousel } from "@/components/live-workouts-carousel"
 import { StoriesCarousel } from "@/components/stories-carousel"
 import { QuickActionsGrid } from "@/components/quick-actions-grid"
 import { WorkoutStreakCard } from "@/components/workout-streak-card"
@@ -48,7 +48,7 @@ export default function HomePage() {
           <div className="pb-24 pt-2 space-y-6 bg-gray-950">
             <StoriesCarousel />
 
-            <LiveWorkoutCard />
+            <LiveWorkoutsCarousel />
 
             <WorkoutStreakCard />
 
