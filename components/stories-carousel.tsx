@@ -60,13 +60,15 @@ export function StoriesCarousel() {
   const [isStoryViewerOpen, setIsStoryViewerOpen] = useState(false)
 
   return (
-    <div className="px-4">
-      <h2 className="text-lg font-bold text-white mb-3">Stories</h2>
-      <div className="flex space-x-3 overflow-x-auto pb-2 scrollbar-hide">
-        {stories.map((story) => (
+    <div>
+      <h2 className="text-lg font-bold text-white mb-3 px-4">Stories</h2>
+      <div className="flex space-x-3 overflow-x-auto pb-2 scrollbar-hide pl-4">
+        {stories.map((story, index) => (
           <div
             key={story.id}
-            className="flex-shrink-0 flex flex-col items-center space-y-2 cursor-pointer"
+            className={`flex-shrink-0 flex flex-col items-center space-y-2 cursor-pointer ${
+              index === stories.length - 1 ? 'pr-4' : ''
+            }`}
             onClick={() => {
               if (!story.isAddStory) {
                 setActiveStory(story.id)

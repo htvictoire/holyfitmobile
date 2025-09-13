@@ -507,11 +507,13 @@ function LiveWorkoutCard({ workout }: { workout: typeof liveWorkouts[0] }) {
 
 export function LiveWorkoutsCarousel() {
   return (
-    <div className="px-4">
-      <h2 className="text-lg font-bold text-white mb-3">Live Workouts</h2>
-      <div className="flex space-x-3 overflow-x-auto pb-2 scrollbar-hide">
-        {liveWorkouts.map((workout) => (
-          <LiveWorkoutCard key={workout.id} workout={workout} />
+    <div>
+      <h2 className="text-lg font-bold text-white mb-3 px-4">Live Workouts</h2>
+      <div className="flex space-x-3 overflow-x-auto pb-2 scrollbar-hide pl-4">
+        {liveWorkouts.map((workout, index) => (
+          <div key={workout.id} className={index === liveWorkouts.length - 1 ? 'pr-4' : ''}>
+            <LiveWorkoutCard workout={workout} />
+          </div>
         ))}
       </div>
     </div>
