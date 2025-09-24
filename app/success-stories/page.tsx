@@ -1,4 +1,3 @@
-import { MobileNavigation } from "@/components/mobile-navigation"
 import { SuccessStoriesHeader } from "@/components/success-stories-header"
 import { FeaturedStories } from "@/components/featured-stories"
 import { StoriesCategories } from "@/components/stories-categories"
@@ -14,7 +13,6 @@ export default function SuccessStoriesPage() {
           <StoriesCategories />
           <RecentTransformations />
         </div>
-        <MobileNavigation />
       </div>
     </div>
   )

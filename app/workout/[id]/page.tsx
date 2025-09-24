@@ -2,8 +2,7 @@
 
 import { useState } from "react"
 import { Play, Pause, Heart, Share2, Bookmark, ArrowLeft } from "lucide-react"
-import { UnifiedHeader } from "@/components/unified-header"
-import { MobileNavigation } from "@/components/mobile-navigation"
+import { Header } from "@/components/header"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
 import Link from "next/link"
@@ -105,7 +104,7 @@ export default function WorkoutDetailPage({ params }: WorkoutDetailPageProps) {
   return (
     <div className="min-h-screen bg-gray-950 text-white">
       <div className="max-w-sm mx-auto bg-gray-950 min-h-screen relative">
-        <UnifiedHeader />
+        <Header />
 
         {/* Back Button */}
         <div className="absolute top-16 left-4 z-20">
@@ -218,7 +217,6 @@ export default function WorkoutDetailPage({ params }: WorkoutDetailPageProps) {
           </div>
         </div>
 
-        <MobileNavigation />
       </div>
     </div>
   )

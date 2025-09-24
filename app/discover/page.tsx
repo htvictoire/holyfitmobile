@@ -1,4 +1,3 @@
-import { MobileNavigation } from "@/components/mobile-navigation"
 import { DiscoverHeader } from "@/components/discover-header"
 import { CoachesNearby } from "@/components/coaches-nearby"
 import { FitnessCategories } from "@/components/fitness-categories"
@@ -16,7 +15,6 @@ export default function DiscoverPage() {
           <CoachesNearby />
           <FeaturedGyms />
         </div>
-        <MobileNavigation />
       </div>
     </div>
   )

@@ -7,8 +7,7 @@ import { Input } from "@/components/ui/input"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { UnifiedHeader } from "@/components/unified-header"
-import { MobileNavigation } from "@/components/mobile-navigation"
+import { Header } from "@/components/header"
 import { formatDistanceToNow } from "date-fns"
 
 const coachRequests = [
@@ -167,7 +166,7 @@ export default function MessagesPage() {
         {view === "list" ? (
           /* Chat List View */
           <>
-            <UnifiedHeader />
+            <Header />
 
             {/* Messages Header */}
             <div className="p-4 border-b border-gray-800">
@@ -441,7 +440,6 @@ export default function MessagesPage() {
           </>
         )}
 
-        <MobileNavigation />
       </div>
     </div>
   )

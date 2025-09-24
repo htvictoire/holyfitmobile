@@ -2,8 +2,7 @@
 
 import { useState } from "react"
 import { Search, Filter, Play, Clock, Zap, Heart, Bookmark, Users, Star } from "lucide-react"
-import { UnifiedHeader } from "@/components/unified-header"
-import { MobileNavigation } from "@/components/mobile-navigation"
+import { Header } from "@/components/header"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -159,7 +158,7 @@ export default function WorkoutsPage() {
   return (
     <div className="min-h-screen bg-gray-950 text-white">
       <div className="max-w-sm mx-auto bg-gray-950 min-h-screen relative">
-        <UnifiedHeader />
+        <Header />
 
         {/* Header Section */}
         <div className="p-4 border-b border-gray-800">
@@ -332,7 +331,6 @@ export default function WorkoutsPage() {
           )}
         </div>
 
-        <MobileNavigation />
       </div>
     </div>
   )

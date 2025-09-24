@@ -1,9 +1,8 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { MobileNavigation } from "@/components/mobile-navigation"
 import { StatusBar } from "@/components/status-bar"
-import { UnifiedHeader } from "@/components/unified-header"
+import { Header } from "@/components/header"
 import { LiveWorkoutsCarousel } from "@/components/live-workouts-carousel"
 import { StoriesCarousel } from "@/components/stories-carousel"
 import { QuickActionsGrid } from "@/components/quick-actions-grid"
@@ -31,7 +30,7 @@ export default function HomePage() {
       {/* Native mobile container with dark theme enforced */}
       <div className="max-w-sm mx-auto bg-gray-950 min-h-screen relative shadow-2xl">
 
-        <UnifiedHeader messageCount={3} notificationCount={5} />
+        <Header messageCount={3} notificationCount={5} />
 
         {/* Pull to refresh with haptic feedback simulation */}
         <div
@@ -58,7 +57,6 @@ export default function HomePage() {
 
         <FloatingActionMenu />
 
-        <MobileNavigation />
       </div>
     </div>
   )

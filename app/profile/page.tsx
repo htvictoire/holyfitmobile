@@ -1,4 +1,3 @@
-import { MobileNavigation } from "@/components/mobile-navigation"
 import { ProfileHeader } from "@/components/profile-header"
 import { ProfileStats } from "@/components/profile-stats"
 import { AchievementsBadges } from "@/components/achievements-badges"
@@ -16,7 +15,6 @@ export default function ProfilePage() {
           <WorkoutHistory />
           <ProfilePosts />
         </div>
-        <MobileNavigation />
       </div>
     </div>
   )

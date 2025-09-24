@@ -10,12 +10,12 @@ import { SearchModal } from "@/components/search-modal"
 import { NotificationsModal } from "@/components/notifications-modal"
 import Link from "next/link"
 
-interface UnifiedHeaderProps {
+interface HeaderProps {
   messageCount?: number
   notificationCount?: number
 }
 
-export function UnifiedHeader({ messageCount = 3, notificationCount = 5 }: UnifiedHeaderProps) {
+export function Header({ messageCount = 3, notificationCount = 5 }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
   const [isNotificationsOpen, setIsNotificationsOpen] = useState(false)

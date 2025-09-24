@@ -1,8 +1,7 @@
 "use client"
 
 import { useState, useEffect } from "react"
-import { UnifiedHeader } from "@/components/unified-header"
-import { MobileNavigation } from "@/components/mobile-navigation"
+import { Header } from "@/components/header"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
@@ -221,7 +220,7 @@ export default function ChallengesPage() {
   return (
     <div className="min-h-screen bg-gray-950 text-white">
       <div className="max-w-sm mx-auto bg-gray-950 min-h-screen relative">
-        <UnifiedHeader />
+        <Header />
 
         {/* Hero Stats Section */}
         <div className="p-4 bg-gradient-to-br from-yellow-500/10 via-orange-500/10 to-red-500/10 border-b border-gray-800">
@@ -351,7 +350,6 @@ export default function ChallengesPage() {
           </div>
         </div>
 
-        <MobileNavigation />
       </div>
     </div>
   )
