@@ -15,11 +15,11 @@ interface HeaderProps {
   notificationCount?: number
 }
 
-export function Header({ messageCount = 3, notificationCount = 5 }: HeaderProps) {
+export function Header({ messageCount = 99, notificationCount = 5 }: HeaderProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isSearchOpen, setIsSearchOpen] = useState(false)
   const [isNotificationsOpen, setIsNotificationsOpen] = useState(false)
-
+ 
   return (
     <>
       <div className="sticky top-0 z-50 bg-gray-950/95 backdrop-blur-xl border-b border-gray-800">
@@ -30,7 +30,7 @@ export function Header({ messageCount = 3, notificationCount = 5 }: HeaderProps)
               <AvatarImage src="/api/placeholder/40/40" alt="Profile" />
               <AvatarFallback className="bg-orange-500 text-white font-semibold">U</AvatarFallback>
             </Avatar>
-            <h1 className="text-xl font-bold text-white">HolyFit</h1>
+            <h1 className="text-xl font-bold text-white">Holy-Fit</h1>
           </div>
 
           {/* Right side */}
@@ -53,7 +53,7 @@ export function Header({ messageCount = 3, notificationCount = 5 }: HeaderProps)
               <Bell className="w-5 h-5" />
               {notificationCount > 0 && (
                 <Badge className="absolute -top-1 -right-1 h-5 w-5 rounded-full bg-orange-500 text-xs p-0 flex items-center justify-center">
-                  {notificationCount}
+                  {99}
                 </Badge>
               )}
             </Button>
@@ -67,7 +67,7 @@ export function Header({ messageCount = 3, notificationCount = 5 }: HeaderProps)
                 <MessageCircle className="w-5 h-5" />
                 {messageCount > 0 && (
                   <Badge className="absolute -top-1 -right-1 h-5 w-5 rounded-full bg-orange-500 text-xs p-0 flex items-center justify-center">
-                    {messageCount}
+                    {99}
                   </Badge>
                 )}
               </Button>
